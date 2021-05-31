@@ -1,0 +1,16 @@
+{% extends "listKids/base.html" %}
+{% block title %}{{ posts.title }}{% endblock %}
+{% block content %}
+
+<h1 dir="rtl", align ="right">{{ posts.title }}</h1>
+<p class="date" dir="rtl", align ="right">
+   به اشتراک گذاشته شده {{ posts.publish }} توسط {{ posts.user }} - تعداد بازدید:{{posts.visits}}
+</p>
+<p dir="rtl", align ="right">
+ خلاصه:
+<br/>
+<h6 dir="rtl">{{posts.summary|truncatewords:50|linebreaks }}</h6>
+
+</p>
+
+{% endblock %}
